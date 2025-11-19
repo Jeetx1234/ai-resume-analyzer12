@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Job Seeker Dashboard</h1>
+    </header>
+    <div class="page">
+
+        <main>
+            <section>
+                <h2>Skill Selector</h2>
+                <div class="skills">
+                    <span class="skill" onclick="toggleSkill(this)">Python</span>
+                    <span class="skill" onclick="toggleSkill(this)">Java</span>
+                    <span class="skill" onclick="toggleSkill(this)">React</span>
+                    <span class="skill" onclick="toggleSkill(this)">Machine Learning</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Upload Resume (PDF)</h2>
+                <input type="file" id="resume-upload" accept=".pdf" onchange="handlePDFUpload(event)">
+            </section>
+
+            <section>
+                <h2>Probability Analyzer</h2>
+                <div class="analyzer">
+                    <p>Selection Probability: <span id="probability-score">0%</span></p>
+                    <ul>
+                        <li>Keyword Match: <span id="keyword-match">0%</span></li>
+                        <li>Experience: <span id="experience">0%</span></li>
+                        <li>Skills: <span id="skills">0%</span></li>
+                        <li>Format Quality: <span id="format-quality">0%</span></li>
+                        <li>ATS Compatibility: <span id="ats-compatibility">0%</span></li>
+                    </ul>
+                    <button onclick="analyzeProbability()">Analyze</button>
+                </div>
+            </section>
+
+            <section>
+                <h2>Notifications</h2>
+                <ul id="notifications"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="firebase.js" type="module"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

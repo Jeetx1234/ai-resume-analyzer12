@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>University Professor Dashboard</h1></header>
+<div class="page">
+  <main>
+    <section>
+      <h2>Job Market Advice</h2>
+      <p>Provide students with career trend insights and resume improvement advice.</p>
+      <textarea id="advice" placeholder="Type your advice here..."></textarea>
+      <button onclick="submitAdvice()">Post Advice</button>
+    </section>
+
+    <section>
+      <h2>Notifications</h2>
+      <ul id="notifications"></ul>
+    </section>
+  </main>
+</div>
+  <script src="firebase.js" type="module"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

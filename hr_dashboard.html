@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>HR Dashboard</h1></header>
+   <div class="page">
+  <main id="dashboard">
+    <section class="stats">
+      <div class="card"><h3>Total Resumes</h3><p id="total-resumes">0</p></div>
+      <div class="card"><h3>Pending Feedback</h3><p id="pending-feedback">0</p></div>
+      <div class="card"><h3>Avg. Match</h3><p id="avg-match">0%</p></div>
+      <div class="card"><h3>High Matches</h3><p id="high-matches">0</p></div>
+    </section>
+
+    <section>
+      <h2>Comparison Dashboard</h2>
+      <button onclick="showComparison()">Run Comparison</button>
+      <div id="comparison"></div>
+    </section>
+
+    <section>
+      <h2>Feedback Panel</h2>
+      <textarea id="feedback-text" placeholder="Write feedback..."></textarea>
+      <button onclick="submitFeedback()">Submit Feedback</button>
+    </section>
+
+    <section>
+      <h2>Job Description Upload</h2>
+      <input type="file" id="jd-upload" accept=".pdf,.docx">
+      <button onclick="uploadJD()">Upload</button>
+    </section>
+
+    <section>
+      <h2>Notifications</h2>
+      <ul id="notifications"></ul>
+    </section>
+  </main>
+</div>
+  <script src="firebase.js" type="module"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
