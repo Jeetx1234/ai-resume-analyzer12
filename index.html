@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Builder - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <h1>AI Resume Builder</h1>
+    <form onsubmit="loginUser(event)">
+      <input type="email" id="email" placeholder="Enter Email" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <select id="role" required>
+        <option value="">Select Role</option>
+        <option value="hr">HR / Recruiter</option>
+        <option value="user">Job Seeker</option>
+        <option value="university">University Professor</option>
+      </select>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script src="firebase.js" type="module"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
